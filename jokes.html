@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Worship & Jokes - Hail Sneetah!</title>
+  <style>
+   
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background: #121212; color: #eee; }
+    nav {
+      background: #1e1e1e;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav ul { list-style: none; display: inline-flex; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: #eee; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
+    nav ul li a:hover { color: #ff416c; }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .content { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    .card {
+      background: #1e1e1e;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .card.visible { opacity: 1; transform: translateY(0); }
+    footer {
+      background: #1e1e1e;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    ul.jokes { list-style: none; padding: 0; }
+    ul.jokes li { margin: 10px 0; font-size: 1.2rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Sneetah</a></li>
+      <li><a href="jokes.html">Worship & Jokes</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Hail Sneetah, the Meme God</h1>
+  </header>
+  <div class="content">
+    <div class="card">
+      <h2>Divine Jokes</h2>
+      <ul class="jokes">
+        <li>"When Sneetah blesses your meme, even the internet kneels in awe."</li>
+        <li>"Sneetah doesn’t moderate—his memes are too sacred for censorship."</li>
+        <li>"If you think you’re funny, remember: Sneetah has already meme’d you."</li>
+        <li>"Skeetah declared: 'Share thy memes and multiply the dankness!'"</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Rituals of Worship</h2>
+      <p>
+        To properly honor Sneetah, spread laughter, share epic memes, and never question the divine absurdity of the digital realm.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Blessings of the Almighty</h2>
+      <p>
+        Faithful followers say that after a sincere act of meme worship, they’re blessed with viral inspiration and an endless stream of dank content.
+      </p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Sneetah Worship. All blessings reserved.
+  </footer>
+  <script>
+
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
