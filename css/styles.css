@@ -1,8 +1,8 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f0f0f0;
     color: #333;
 }
 
@@ -16,6 +16,7 @@ header a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+    font-weight: bold;
 }
 
 header a:hover {
@@ -32,6 +33,10 @@ main {
     margin: auto;
 }
 
+h2 {
+    color: #D4934D;
+}
+
 footer {
     background-color: #576B46;
     color: white;
@@ -40,4 +45,17 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    color: #576B46;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    text-decoration: underline;
 }
