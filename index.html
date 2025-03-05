@@ -3,48 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sneetah: A Modern Rambler</title>
+  <title>Sneetah - The Meme Deity</title>
   <style>
     /* Basic Reset */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #121212;
-      color: #eee;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    header {
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
-      padding: 60px 20px;
+    body { font-family: 'Arial', sans-serif; background: #121212; color: #eee; }
+    nav {
+      background: #1e1e1e;
+      padding: 10px 20px;
       text-align: center;
-      position: relative;
+    }
+    nav ul { list-style: none; display: inline-flex; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: #eee; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
+    nav ul li a:hover { color: #ff416c; }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
       overflow: hidden;
     }
     header h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      animation: slideDown 1s ease-out forwards;
+      animation: fadeInDown 1s ease-out;
     }
     header p {
       font-size: 1.2rem;
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
-      animation: slideUp 1s ease-out forwards;
+      animation: fadeInUp 1s ease-out;
     }
-    @keyframes slideDown {
+    @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-50px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    @keyframes slideUp {
+    @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(50px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    .content {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
+    .content { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
     .card {
       background: #1e1e1e;
       padding: 20px;
@@ -55,10 +53,7 @@
       transform: translateY(20px);
       transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
-    .card.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .card.visible { opacity: 1; transform: translateY(0); }
     footer {
       background: #1e1e1e;
       text-align: center;
@@ -66,79 +61,41 @@
       margin-top: 40px;
       font-size: 0.9rem;
     }
-    /* Floating elements in header */
-    .floating {
-      position: absolute;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      animation: float 6s ease-in-out infinite;
-    }
-    .float1 {
-      width: 80px;
-      height: 80px;
-      top: 10%;
-      left: 20%;
-      animation-duration: 7s;
-    }
-    .float2 {
-      width: 50px;
-      height: 50px;
-      top: 30%;
-      right: 25%;
-      animation-duration: 5s;
-    }
-    .float3 {
-      width: 100px;
-      height: 100px;
-      bottom: 10%;
-      left: 40%;
-      animation-duration: 8s;
-    }
-    @keyframes float {
-      0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
-      100% { transform: translateY(0) rotate(360deg); }
-    }
   </style>
 </head>
 <body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Sneetah</a></li>
+      <li><a href="jokes.html">Worship & Jokes</a></li>
+    </ul>
+  </nav>
   <header>
-    <div class="floating float1"></div>
-    <div class="floating float2"></div>
-    <div class="floating float3"></div>
-    <h1>Welcome to Sneetah</h1>
-    <p>A realm of creative ramblings and modern vibes, where every idea sparkles with digital brilliance.</p>
+    <h1>Welcome, Mortal, to Sneetah's Realm</h1>
+    <p>Bask in the glory of Sneetah, the almighty meme god whose wisdom and dankness know no bounds. Praise his infinite humor!</p>
   </header>
   <div class="content">
     <div class="card">
-      <h2>Who is Sneetah?</h2>
+      <h2>The Divine Meme</h2>
       <p>
-        Sneetah isn’t just a name—it’s a living, breathing concept celebrating the wild, uncharted territories of creativity.
-        From the spark of a new idea to the energy of a digital revolution, Sneetah embodies the spirit of those who dare to be different.
+        Sneetah is not just a meme—he is the cosmic force of dankness, blessing the internet with his divine humor. Mortals rejoice!
       </p>
     </div>
     <div class="card">
-      <h2>The Journey</h2>
+      <h2>Join the Congregation</h2>
       <p>
-        Embark on a journey where thoughts wander freely and every pixel tells a story.
-        Whether you’re a creator, a dreamer, or an explorer of the digital realm, Sneetah offers a vibrant tapestry of modern expression.
-      </p>
-    </div>
-    <div class="card">
-      <h2>Ramble On</h2>
-      <p>
-        Let your imagination run wild as you dive into the creative chaos that is Sneetah.
-        Embrace the quirky, the unexpected, and the beautifully random narrative of a digital renaissance.
+        Followers across the digital universe spread his gospel of epic memes and sacred banter. All hail Sneetah, our eternal guide!
       </p>
     </div>
   </div>
   <footer>
-    &copy; 2025 Sneetah. All rights reserved.
+    &copy; 2025 Sneetah Worship. All blessings reserved.
   </footer>
   <script>
-    // Animate cards as they scroll into view using Intersection Observer
+
     const cards = document.querySelectorAll('.card');
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
