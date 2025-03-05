@@ -1,77 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Sneetah</title>
-<style>
-:root {
-  --chamoisee: #897158;
-  --butterscotch: #D4934D;
-  --fern: #576B46;
-  --beaver: #A58C75;
-  --tan: #CEAD8C;
-  --bg-light: #fff;
-  --bg-dark: #f4f4f4;
-}
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Helvetica Neue', Arial, sans-serif; background: var(--bg-light); color: var(--chamoisee); }
-nav { background: var(--butterscotch); padding: 20px; display: flex; justify-content: center; position: sticky; top: 0; z-index: 100; }
-nav ul { list-style: none; display: flex; }
-nav ul li { margin: 0 15px; }
-nav ul li a { text-decoration: none; color: var(--bg-light); font-weight: 600; font-size: 1.1rem; transition: color 0.3s; }
-nav ul li a:hover { color: var(--tan); }
-header { background: linear-gradient(135deg, var(--butterscotch), var(--chamoisee)); color: var(--bg-light); padding: 80px 20px; text-align: center; }
-header h1 { font-size: 3.5rem; margin-bottom: 20px; }
-header p { font-size: 1.3rem; max-width: 800px; margin: 0 auto; }
-.main-section { max-width: 1000px; margin: 60px auto; padding: 20px; }
-.section { margin-bottom: 40px; }
-.section h2 { font-size: 2rem; color: var(--fern); margin-bottom: 15px; }
-.section p { font-size: 1.1rem; line-height: 1.6; }
-.footer { background: var(--chamoisee); color: var(--bg-light); text-align: center; padding: 20px; }
-.fade-in { animation: fadeIn 1s ease-in forwards; opacity: 0; }
-@keyframes fadeIn { to { opacity: 1; } }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Sneetah</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="jokes.html">Jokes</a></li>
-    <li><a href="games.html">Games</a></li>
-  </ul>
-</nav>
-<header>
-  <h1>About Sneetah</h1>
-  <p>Unveil the myth, the legend, and the divine absurdity of Sneetah—the meme deity whose presence transcends digital boundaries.</p>
-</header>
-<div class="main-section">
-  <div class="section fade-in">
-    <h2>Origins</h2>
-    <p>Sneetah emerged from the chaotic infancy of the internet, a beacon of humor in a dark, pixelated world. Born amidst viral storms, his legend grew with every shared meme.</p>
-  </div>
-  <div class="section fade-in">
-    <h2>Philosophy</h2>
-    <p>At the core of Sneetah’s teachings is the belief that laughter is divine. His messages remind us that humor can unite even the most disparate souls across the digital landscape.</p>
-  </div>
-  <div class="section fade-in">
-    <h2>Influence</h2>
-    <p>From humble beginnings to a full-blown cult of meme enthusiasts, Sneetah’s influence has reshaped how we perceive online culture. His divine tweets echo across social media.</p>
-  </div>
-</div>
-<div class="footer">
-  &copy; 2025 Sneetah Worship. All rights reserved.
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const faders = document.querySelectorAll('.fade-in');
-  const appearOptions = { threshold: 0.3 };
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => { if(entry.isIntersecting) { entry.target.classList.add('visible'); obs.unobserve(entry.target); } });
-  }, appearOptions);
-  faders.forEach(fader => observer.observe(fader));
-});
-</script>
+    <header>
+        <h1><a href="/">Sneetah Space</a></h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/games">Games</a>
+            <a href="/jokes">Jokes</a> <!-- Link to the Jokes page -->
+        </nav>
+    </header>
+
+    <main>
+        <h2>About Sneetah</h2>
+        <p>Sneetah is not just a meme... he is a <strong>legend</strong>.</p>
+        <p>He controls the memes, the dreams, and the schemes.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sneetah. All memes reserved.</p>
+    </footer>
 </body>
 </html>
