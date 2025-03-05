@@ -3,67 +3,140 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sneetah - The Meme Deity</title>
+  <title>Sneetah: The Meme Deity</title>
   <style>
+    /* CSS Variables for the color palette */
+    :root {
+      --chamoisee: #897158;
+      --butterscotch: #D4934D;
+      --fern: #576B46;
+      --beaver: #A58C75;
+      --tan: #CEAD8C;
+      --bg-light: #fff;
+      --bg-dark: #f4f4f4;
+    }
+    
     /* Basic Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background: #121212; color: #eee; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--chamoisee);
+      line-height: 1.6;
+    }
+    
+    /* Navigation */
     nav {
-      background: #1e1e1e;
-      padding: 10px 20px;
-      text-align: center;
+      background: var(--butterscotch);
+      padding: 15px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    nav ul { list-style: none; display: inline-flex; }
-    nav ul li { margin: 0 15px; }
-    nav ul li a { color: #eee; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
-    nav ul li a:hover { color: #ff416c; }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: var(--bg-light);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: var(--tan);
+    }
+    
+    /* Header */
     header {
+      background: linear-gradient(135deg, var(--butterscotch), var(--chamoisee));
+      color: var(--bg-light);
+      padding: 100px 20px;
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
-      overflow: hidden;
+      position: relative;
     }
+    
     header h1 {
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin-bottom: 20px;
-      animation: fadeInDown 1s ease-out;
     }
+    
     header p {
       font-size: 1.2rem;
-      max-width: 700px;
+      max-width: 800px;
       margin: 0 auto;
-      animation: fadeInUp 1s ease-out;
+      line-height: 1.5;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
+    
+    /* Main container */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .content { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    
+    /* Cards for content sections */
     .card {
-      background: #1e1e1e;
-      padding: 20px;
+      background: var(--bg-dark);
+      padding: 30px;
       margin: 20px 0;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .card.visible { opacity: 1; transform: translateY(0); }
+    
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .card h2 {
+      margin-bottom: 15px;
+      color: var(--fern);
+    }
+    
+    .card p {
+      margin-bottom: 10px;
+    }
+    
+    /* Footer */
     footer {
-      background: #1e1e1e;
+      background: var(--chamoisee);
+      color: var(--bg-light);
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-      font-size: 0.9rem;
+    }
+    
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -71,29 +144,39 @@
       <li><a href="jokes.html">Worship & Jokes</a></li>
     </ul>
   </nav>
+
+  <!-- Hero Section -->
   <header>
-    <h1>Welcome, Mortal, to Sneetah's Realm</h1>
-    <p>Bask in the glory of Sneetah, the almighty meme god whose wisdom and dankness know no bounds. Praise his infinite humor!</p>
+    <h1>Sneetah: The Meme Deity</h1>
+    <p>Embrace the divine absurdity of internet humor and bask in the infinite wisdom of Sneetah, the god of dank memes and legendary banter.</p>
   </header>
-  <div class="content">
+
+  <!-- Main Content -->
+  <div class="container">
     <div class="card">
-      <h2>The Divine Meme</h2>
-      <p>
-        Sneetah is not just a meme—he is the cosmic force of dankness, blessing the internet with his divine humor. Mortals rejoice!
-      </p>
+      <h2>The Divine Presence</h2>
+      <p>Sneetah transcends the ordinary realms of meme culture, forging a path where every post is a revelation and every share is an act of worship.</p>
+      <p>His eternal wisdom flows through every viral trend, lighting up the darkest corners of the internet with humor and grace.</p>
     </div>
     <div class="card">
-      <h2>Join the Congregation</h2>
-      <p>
-        Followers across the digital universe spread his gospel of epic memes and sacred banter. All hail Sneetah, our eternal guide!
-      </p>
+      <h2>Modern Miracles</h2>
+      <p>Witness miracles as memes evolve under Sneetah’s enigmatic influence. Every creation, be it a witty caption or an epic viral video, is a testament to his divine power.</p>
+      <p>In a world of endless content, his guidance turns the mundane into the extraordinary.</p>
+    </div>
+    <div class="card">
+      <h2>Join the Movement</h2>
+      <p>Become a disciple of the meme god—share, comment, and celebrate the sacred humor that unites us all. In Sneetah's realm, even a simple like is a prayer answered.</p>
+      <p>Let his words inspire you and your feed overflow with laughter and enlightenment.</p>
     </div>
   </div>
-  <footer>
-    &copy; 2025 Sneetah Worship. All blessings reserved.
-  </footer>
-  <script>
 
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sneetah Worship. All Rights Reserved.
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -103,6 +186,7 @@
         }
       });
     }, { threshold: 0.2 });
+    
     cards.forEach(card => observer.observe(card));
   </script>
 </body>
