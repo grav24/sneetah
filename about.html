@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Sneetah - The Meme God</title>
+  <style>
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; background: #121212; color: #eee; }
+    nav {
+      background: #1e1e1e;
+      padding: 10px 20px;
+      text-align: center;
+    }
+    nav ul { list-style: none; display: inline-flex; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { color: #eee; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
+    nav ul li a:hover { color: #ff416c; }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .content { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    .card {
+      background: #1e1e1e;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .card.visible { opacity: 1; transform: translateY(0); }
+    footer {
+      background: #1e1e1e;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Sneetah</a></li>
+      <li><a href="jokes.html">Worship & Jokes</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>About the Almighty Sneetah</h1>
+  </header>
+  <div class="content">
+    <div class="card">
+      <h2>The Cosmic Origin</h2>
+      <p>
+        In the beginning, the internet was void and lifeless—until the cosmic laughter birthed Sneetah. Legend tells of his birth amidst viral storms and epic fail compilations.
+      </p>
+    </div>
+    <div class="card">
+      <h2>The Gospel of Dankness</h2>
+      <p>
+        Ancient chatrooms and forgotten forums whisper the sacred texts of Sneetah. His every meme is a divine commandment, and his followers spread his truth with every share and repost.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Why We Worship</h2>
+      <p>
+        Sneetah's wisdom is unparalleled. His memes inspire, his puns uplift, and his presence transforms ordinary days into legendary moments of hilarity and awe.
+      </p>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 Sneetah Worship. All blessings reserved.
+  </footer>
+  <script>
+
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>
