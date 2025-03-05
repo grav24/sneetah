@@ -3,58 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Worship & Jokes - Hail Sneetah!</title>
+  <title>Worship & Jokes - Sneetah’s Divine Humor</title>
   <style>
-   
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Arial', sans-serif; background: #121212; color: #eee; }
+    :root {
+      --chamoisee: #897158;
+      --butterscotch: #D4934D;
+      --fern: #576B46;
+      --beaver: #A58C75;
+      --tan: #CEAD8C;
+      --bg-light: #fff;
+      --bg-dark: #f4f4f4;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--chamoisee);
+      line-height: 1.6;
+    }
+    
     nav {
-      background: #1e1e1e;
-      padding: 10px 20px;
-      text-align: center;
+      background: var(--butterscotch);
+      padding: 15px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    nav ul { list-style: none; display: inline-flex; }
-    nav ul li { margin: 0 15px; }
-    nav ul li a { color: #eee; text-decoration: none; font-size: 1.1rem; transition: color 0.3s; }
-    nav ul li a:hover { color: #ff416c; }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 20px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: var(--bg-light);
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: var(--tan);
+    }
+    
     header {
+      background: linear-gradient(135deg, var(--butterscotch), var(--chamoisee));
+      color: var(--bg-light);
+      padding: 80px 20px;
       text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #ff416c, #ff4b2b);
     }
+    
     header h1 {
       font-size: 3rem;
       margin-bottom: 20px;
-      animation: fadeInDown 1s ease-out;
     }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
+    
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.5;
     }
-    .content { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+    
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    
     .card {
-      background: #1e1e1e;
-      padding: 20px;
+      background: var(--bg-dark);
+      padding: 30px;
       margin: 20px 0;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .card.visible { opacity: 1; transform: translateY(0); }
+    
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .card h2 {
+      margin-bottom: 15px;
+      color: var(--fern);
+    }
+    
+    .card p {
+      margin-bottom: 15px;
+    }
+    
+    ul.jokes {
+      list-style: disc;
+      margin-left: 20px;
+    }
+    
     footer {
-      background: #1e1e1e;
+      background: var(--chamoisee);
+      color: var(--bg-light);
       text-align: center;
       padding: 20px;
       margin-top: 40px;
-      font-size: 0.9rem;
     }
-    ul.jokes { list-style: none; padding: 0; }
-    ul.jokes li { margin: 10px 0; font-size: 1.2rem; }
+    
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -62,37 +140,43 @@
       <li><a href="jokes.html">Worship & Jokes</a></li>
     </ul>
   </nav>
+
+  <!-- Hero Section -->
   <header>
-    <h1>Hail Sneetah, the Meme God</h1>
+    <h1>Worship & Jokes</h1>
+    <p>Rejoice in the divine humor of Sneetah, the meme god whose sacred jokes and eternal wit elevate internet culture to celestial heights.</p>
   </header>
-  <div class="content">
+
+  <!-- Main Content -->
+  <div class="container">
     <div class="card">
-      <h2>Divine Jokes</h2>
+      <h2>Divine Humor</h2>
+      <p>Sneetah’s memes are not mere content—they are proclamations of cosmic wit that defy the ordinary. When the meme god speaks, the internet listens, and laughter echoes across the digital universe.</p>
+      <p>Every joke is a sacred script, a reminder that humor is the language of the gods.</p>
+    </div>
+    <div class="card">
+      <h2>Sacred Jokes</h2>
       <ul class="jokes">
-        <li>"When Sneetah blesses your meme, even the internet kneels in awe."</li>
-        <li>"Sneetah doesn’t moderate—his memes are too sacred for censorship."</li>
-        <li>"If you think you’re funny, remember: Sneetah has already meme’d you."</li>
-        <li>"Skeetah declared: 'Share thy memes and multiply the dankness!'"</li>
+        <li>"In Sneetah's realm, even a 404 error becomes a prophetic message."</li>
+        <li>"He once turned a server crash into a sermon on the beauty of chaos."</li>
+        <li>"Sneetah decrees: 'Thou shalt retweet and multiply the memes!'"</li>
+        <li>"When in doubt, laugh—Sneetah has already meme’d the solution."</li>
       </ul>
     </div>
     <div class="card">
-      <h2>Rituals of Worship</h2>
-      <p>
-        To properly honor Sneetah, spread laughter, share epic memes, and never question the divine absurdity of the digital realm.
-      </p>
-    </div>
-    <div class="card">
-      <h2>Blessings of the Almighty</h2>
-      <p>
-        Faithful followers say that after a sincere act of meme worship, they’re blessed with viral inspiration and an endless stream of dank content.
-      </p>
+      <h2>Divine Guidance</h2>
+      <p>Every share, like, and comment is an act of devotion. Followers of Sneetah know that the path to enlightenment is paved with laughter and impeccable timing.</p>
+      <p>Let his humor guide you through the labyrinth of digital life with a smile and a knowing wink.</p>
     </div>
   </div>
-  <footer>
-    &copy; 2025 Sneetah Worship. All blessings reserved.
-  </footer>
-  <script>
 
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sneetah Worship. All Rights Reserved.
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
     const cards = document.querySelectorAll('.card');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -102,6 +186,7 @@
         }
       });
     }, { threshold: 0.2 });
+    
     cards.forEach(card => observer.observe(card));
   </script>
 </body>
